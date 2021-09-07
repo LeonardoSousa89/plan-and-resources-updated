@@ -34,7 +34,9 @@ REVOKE INSERT, UPDATE, DELETE ON [table] FROM [usuario];
 
 
 
-                   	DDL
+                   			DDL
+							---   
+
 CREATE DATABASE [database];
 DROP DATABASE [database];
 CREATE TABLE [table];
@@ -45,15 +47,22 @@ DROP TABLE  [table];
 CREATE SCHEMA [schema];
 CREATE PROCEDURE [procedure];
 
-                    DML    
+                    		DML  
+							---
+
 INSERT INTO [table] VALUES(table_values);
 UPDATE [table] SET [field];
 DELETE FROM [table] WHERE [condition];
-					DQL
+
+
+							DQL
+							---
 
 SELECT * FROM [table];
 SELECT [condition] FROM [table];
 SELECT [condition] FROM [table] WHERE [condition];
+
+
 
 referências:
 

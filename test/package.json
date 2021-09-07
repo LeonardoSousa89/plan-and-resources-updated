@@ -4,9 +4,11 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test":     "nodemon --exec babel-node ./secure/index.js",
-    "pagetest": "nodemon --exec babel-node ./secure/server.js",
-    "start":    "nodemon ./seach/server.js"
+    "test":      "nodemon --exec babel-node ./secure-auth-insert/index.js",
+    "pagetest":  "nodemon --exec babel-node ./secure-auth-insert/server.js",
+    "search":    "nodemon ./search/server.js",
+    "pass":      "nodemon --exec babel-node ./login-passport-test/index.js",
+    "pass-serve":"nodemon --exec babel-node ./login-passport-test/server.js"
   },
   "keywords": [],
   "author": "",

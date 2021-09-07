@@ -11,4 +11,8 @@ app.get('/auth',(req,res)=>{
     res.sendFile(__dirname + '/logado.html')
 })
 
+app.get('/err',(req,res)=>{
+    res.sendFile(__dirname + '/assets/404.gif')
+})
+
 app.listen(port,()=>console.log(`online into: ${port}`))

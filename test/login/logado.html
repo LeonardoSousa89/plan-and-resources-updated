@@ -24,6 +24,15 @@
     <script>
         const doc   = document
         doc.onclick = addEventListener('click',(e)=>e.preventDefault())
+
+        function check(){
+            let user = localStorage.getItem('_USER')
+            let pass = localStorage.getItem('_PASS')
+            if(!user || !pass){
+                doc.location.href = 'http://localhost:3003/err'
+            }
+        }
+        check()
     </script>
 </body>
 </html>

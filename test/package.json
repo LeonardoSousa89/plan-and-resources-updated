@@ -4,25 +4,30 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test":       "nodemon --exec babel-node ./secure-auth-insert/index.js",
-    "test-serve": "nodemon --exec babel-node ./secure-auth-insert/server.js",
-    "search":     "nodemon ./search/server.js",
-    "pass":       "nodemon --exec babel-node ./login-passport-test/index.js",
-    "pass-serve": "nodemon --exec babel-node ./login-passport-test/server.js",
-    "login":      "nodemon --exec babel-node ./login/index.js",
-    "login-serve":"nodemon --exec babel-node ./login/server.js"
+    "test":           "nodemon --exec babel-node ./secure-auth-insert/index.js",
+    "test-serve":     "nodemon --exec babel-node ./secure-auth-insert/server.js",
+    "search":         "nodemon ./search/server.js",
+    "pass":           "nodemon --exec babel-node ./login-passport-test/index.js",
+    "pass-serve":     "nodemon --exec babel-node ./login-passport-test/server.js",
+    "login":          "nodemon --exec babel-node ./login/index.js",
+    "login-serve":    "nodemon --exec babel-node ./login/server.js",
+    "no-data-serve":  "nodemon --exec babel-node ./security/auth.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "cryptr": "^6.0.2",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "knex": "^0.95.10",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "pg": "^8.7.1"
   },
   "devDependencies": {

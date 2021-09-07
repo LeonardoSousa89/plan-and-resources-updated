@@ -33,7 +33,7 @@
         h1{
             text-shadow: 0px 0px 5px royalblue;
         }
-        #pass, #user{
+        #pass, #user,#username{
             margin: 2vh;
             padding:0.5rem;
             width:40%;
@@ -49,6 +49,10 @@
             box-shadow:0px 0px 3px blue;
         }
         #pass:hover{
+            border:solid 1px blue;
+            box-shadow:0px 0px 3px blue;
+        }
+        #username:hover{
             border:solid 1px blue;
             box-shadow:0px 0px 3px blue;
         }
@@ -84,27 +88,27 @@
     <title>auth&copy;</title>
 </head>
 <body>
- 
     
     <form action="" class="form">
-        <h1>login&trade;</h1>
+        <h1>create user&trade;</h1>
+        <input type="text" id="username" placeholder="username">
         <input type="text" id="user" placeholder="user">
         <input type="password" id="pass" placeholder="password">
 
-        <button>login</button>
+        <button>create</button>
 
         <span>
-            <p>do you haven't account? create an account <strong id="sO" onclick="sigOut(Event)">signOut.</strong></p>
+            <p>have a user account? <strong id="sI" onclick="sigIn(Event)">sigIn.</strong></p>
         </span>
     </form>
 
     <script>
         const doc = document
-
+        
         doc.onclick = addEventListener('click',(e)=>e.preventDefault())
-
-        function sigOut(){
-            doc.location.href = 'http://localhost:3003/cadastro'
+        
+        function sigIn(){
+            doc.location.href = 'http://localhost:3003'
         }
     </script>
 </body>

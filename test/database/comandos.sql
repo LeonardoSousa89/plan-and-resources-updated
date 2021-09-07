@@ -1,7 +1,5 @@
 							DCL
 							---
-grupos de comandos:
-
 psql  -U postgres
 psql - U [usuario] -d postgres
 psql - U [usuario] -d [database]
@@ -49,7 +47,7 @@ CREATE PROCEDURE [procedure];
 
                     DML    
 INSERT INTO [table] VALUES(table_values);
-UPDATE  
+UPDATE [table] SET [field];
 DELETE FROM [table] WHERE [condition];
 					DQL
 

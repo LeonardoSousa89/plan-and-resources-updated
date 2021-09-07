@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:black;
+            color:white;
+        }
+        #btn{
+            cursor:pointer;
+        }
+    </style>
+    <title>Create Account&reg;</title>
+</head>
+<body>
+    <h1>Create Login user&reg;</h1>
+
+    <input type="text" placeholder="user" id="user">
+    <input type="password" placeholder="password" id="pass">
+    <button id="btn" onclick="insertUser(Event)">insert</button>
+
+    <script>
+        const url    = 'http://localhost:8003'
+
+        let doc = document
+        doc.onclick = addEventListener('click',(e)=> e.preventDefault())
+
+        function insertUser(){
+            let user    = doc.querySelector('#user').value
+            let pass    = doc.querySelector('#pass').value   
+
+            let data = { user, pass }
+
+            const config = {
+                    method:'POST',
+                    body:JSON.stringify(data),
+                    headers :{
+                        'Content-Type': 'application/json'
+                 }
+            }
+          
+            fetch(url,config)
+                        .then(login => console.log(login.json()))
+                        .then(login => {
+                                login
+                                clear()
+                            })
+                        .catch(_ => console.log('erro ao inserir os dados!'))
+        }
+
+        function clear(){
+            let user    = doc.querySelector('#user')
+            let pass    = doc.querySelector('#pass')
+
+            user.value = '' 
+            pass.value = ''
+        } 
+    </script>
+</body>
+</html>

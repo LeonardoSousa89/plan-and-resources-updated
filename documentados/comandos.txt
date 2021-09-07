@@ -1,0 +1,37 @@
+﻿instalações:
+ npm i typescript --save-dev
+ npm i nodemon
+ npm i knex
+ npm i cors
+ npm i pg
+ npm i consign
+ npm i --save-dev @types/node
+ npm i @types/express
+ npm i @types/cors
+ npm i @types/knex
+ npm i -g node-sass
+knex:
+ knex init
+ knex migrate:make create_table_[nome-da-tabela]
+ knex migrate:latest
+ knex migrate:rollback
+ts:
+ npx tsc
+ npx tsc --init
+ npx tsc [nome-do-arquivo]
+ npx tsc [nome-do-arquivo] --watch
+sass:
+ node-sass [caminho-de-entrada] [caminho-de-saida]
+ node-sass --watch [caminho-de-entrada] [caminho-de-saida]
+node:
+ node [nome-do-arquivo]
+ npm start nodemon [nome-do-arquivo]
+postgres:
+ psql -U postgres
+ \c
+ \l
+ \c [nome-do-banco]
+ \dt
+ \q
+babel:
+ nodemon --exec babel-node [caminho-do-arquivo]

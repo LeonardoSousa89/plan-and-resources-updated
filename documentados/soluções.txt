@@ -1,0 +1,23 @@
+redirecionamento de url:
+	possível solução:
+		ao autenticar os inputs de login,
+		enviar os valores dos inputs ao localstorage
+		e se na tela home o locastorage estiver preenchido,
+		validar a entrada de usuário(caso não dê certo, verifique,
+		outro caminho para a solução), e ao clicar no botão de sair(tela home),
+		ou o usuário estiver redirecionado a tela/url login(tela de login), remover,
+		os dados do localstorage, para não permitir um acumulo de dados,
+		e não atingir a autenticação requerida.
+
+		
+		
+		
+		(use a pasta de testes para testar a solução)
+
+pesquisa:
+	escrever solução
+
+
+
+
+		(use a pasta de testes para testar a solução)

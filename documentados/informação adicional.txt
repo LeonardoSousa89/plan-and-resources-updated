@@ -1,0 +1,6 @@
+responsividade:
+	https://www.youtube.com/watch?v=H91DhKPjhPk
+
+	https://www.alura.com.br/artigos/guia-de-unidades-no-css?gclid=CjwKCAjw092IBhAwEiwAxR1lRubjOV94f3cLwQGMthQcXmnv_6lEakAWR8pNDKpazjCAt_wIeyRueBoCFWkQAvD_BwE
+
+	https://css-tricks.com/snippets/css/media-queries-for-standard-devices/

@@ -6,7 +6,7 @@
   "scripts": {
     "test":     "nodemon --exec babel-node ./secure/index.js",
     "pagetest": "nodemon --exec babel-node ./secure/server.js",
-    "start":    "nodemon server.js"
+    "start":    "nodemon ./seach/server.js"
   },
   "keywords": [],
   "author": "",

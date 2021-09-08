@@ -54,57 +54,66 @@
 
             <input type="text" placeholder="user" id="user">
             <input type="password" placeholder="password" id="pass">
-            <input type="submit" value="login" id="login" onclick="Teste(Event)">
+            <input type="submit" value="login" onclick="Login(Event)">
        </form>
     </div>
 
     <script>
-        this.url = 'http://localhost:3004/'
+        let url = 'http://localhost:3004/'
 
         const doc = document
         doc.onclick = addEventListener('click',(e)=>e.preventDefault())
         
-        let user = doc.querySelector('#user').value 
-        let pass = doc.querySelector('#pass').value
+        async function Login(){
+                    let user = doc.querySelector('#user').value 
+                    let pass = doc.querySelector('#pass').value
 
-        let data = { user, pass }
+                    let login = { user , pass }
 
-        this.config = {
-            method:'POST',
-            body:JSON.stringify(data),
-            Headers: {
-                'content-type':'application/json'
-            }
-        }
-        
-           async function Login(url, config){
-                url    = this.url
-                config = this.config
+                    let config = {
+                        method:'POST',
+                        body:JSON.stringify(login),
+                        Headers: {
+                            'Content-Type':'application/json'
+                        }
+                    }
 
-                console.log(url)
-                console.log(this.user.value , this.pass.value)
-                console.log(data)
-                console.log(data.user.value)
-                console.log(data.pass.value)
-                console.log(this.data)
-                console.log(config)
-                //console.log(this.config)
-                    /*await fetch(url, config)
-                                .then(data => console.log(data.json()))
-                                .then(data => data)
-                                .catch(err => console.log('Erro:' + err))*/
+                    console.log(login)
+                    console.log(config)
+
+                    await fetch(url, config)
+                                .then(account => {
+                                        clear()
+                                        account.json()
+                                })
+                                .catch(err    => console.log('Erro:' + err))
         }
 
         function Teste(){
-                console.log(url)
-                console.log(this.user.value , this.pass.value)
-                console.log(data)
-                //console.log(data.user.value)
-                console.log(data.user)
-                //console.log(data.pass.value)
-                console.log(data.pass)
-                //console.log(this.data)
-                console.log(config)
+            let user = doc.querySelector('#user').value 
+            let pass = doc.querySelector('#pass').value
+
+            let data = { user , pass }
+
+            let config = {
+                method:'POST',
+                body:JSON.stringify(data),
+                Headers: {
+                    'content-type':'application/json'
+                }
+            }
+
+            console.log(data)
+            console.log(config)
+            clear()
+        }
+
+        function clear(){
+            let user = doc.querySelector('#user') 
+            let pass = doc.querySelector('#pass')
+
+            user.value = ''
+            pass.value = ''
         }
    </script>
 </body>

@@ -1,5 +1,7 @@
 import bcrypt from 'bcrypt'
-bcrypt.hashSync()
+import LocalStrategy from 'passport-local'
+
+const NewStrategy = LocalStrategy.Strategy 
 
 const users = [{
     _id: 1,
@@ -20,4 +22,23 @@ export default function User(passport){
     passport.serializeUser((user, done)=>{
         done(err, user._id)
     })
+
+    passport.deserializeUser((id, done)=>{
+        try{
+            const user = findUserById(id)
+            done(null, user)
+        }catch(err){
+            console.log(err)
+            return done(err, null)
+        }
+    })
+
+    passport.use(new NewStrategy({
+        usernameField: 'userName',
+        passwordField: 'password'
+    },
+    
+    ()=>{
+
+    }))
 }

@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import LocalStrategy from 'passport-local'
 
 const NewStrategy = LocalStrategy.Strategy 

@@ -11,8 +11,7 @@
     "pass-serve":     "nodemon --exec babel-node ./login-passport-test/server.js",
     "login":          "nodemon --exec babel-node ./login/index.js",
     "login-serve":    "nodemon --exec babel-node ./login/server.js",
-    "no-data-serve":  "nodemon --exec babel-node ./security/test-no-database/auth.js",
-    "page-serve":     "nodemon --exec babel-node ./security/test-no-database/server.js"
+    "no-data-serve":  "nodemon --exec babel-node ./security/test-no-database/server.js"
   },
   "keywords": [],
   "author": "",

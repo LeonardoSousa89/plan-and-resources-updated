@@ -38,7 +38,17 @@ export default function User(passport){
         passwordField: 'password'
     },
     
-    ()=>{
+    (username, password, done)=>{
+        try{
+            const user = findUser(username)
+            if(!user) return done(null, false)
 
+            const isValid = bcrypt.compareSync(password, user.password)
+            if(!isValid) return done(null, false)
+            return done(null, user)
+        }catch(err){
+            console.log(err)
+            done(err,false)
+        }
     }))
 }

@@ -85,6 +85,33 @@ auth('Mendes',1234)
 
 
 
+/*função teste 6*/
+function _search(ar,name){
+    return ar.find(e =>{
+        if(name === e.name) return e
+    })
+}
+
+console.log(_search(account,'Nikky'))
+
+
+
+
+/*função teste 7*/
+function _login(ar,name,password){
+    return ar.find(e =>{
+        if(name === e.name && password === e.pass) console.log('User login with success!') 
+        else console.log('')
+    })
+}
+
+_login(account,'Mendes',1234)
+_login(account,'Mendes',124)
+_login(account,'',124)
+_login(account,'Mohinder',1254)
+_login(account,'Noah',1234)
+
+
 
 
 /*
